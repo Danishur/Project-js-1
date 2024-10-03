@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Car Dealership Management</title>
+  <style>
+    /* Body Styling */
+    body {
+      font-family: 'Poppins', sans-serif;
+      background-color: #f7f7f7;
+      margin: 0;
+      padding: 20px;
+    }
+
+    /* Title Styling */
+    h2, h3 {
+      color: #34495e;
+      text-align: center;
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+    }
+
+    /* Form Container */
+    .form-container {
+      background-color: white;
+      padding: 40px;
+      border-radius: 12px;
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+      max-width: 550px;
+      margin: 0 auto;
+      margin-top: 30px;
+      transition: transform 0.3s ease;
+    }
+
+    /* Form Hover Effect */
+    .form-container:hover {
+      transform: translateY(-10px);
+    }
+
+    /* Input Field Styling */
+    .form-group {
+      margin-bottom: 1.5em;
+    }
+
+    label {
+      display: block;
+      font-size: 14px;
+      color: #2c3e50;
+      margin-bottom: 8px;
+    }
+
+    input {
+      width: 100%;
+      padding: 12px;
+      font-size: 16px;
+      border: 1px solid #ddd;
+      border-radius: 8px;
+      box-sizing: border-box;
+      transition: all 0.3s ease;
+      background-color: #f9f9f9;
+    }
+
+    input:focus {
+      border-color: #3498db;
+      outline: none;
+      background-color: #fff;
+    }
+
+    /* Button Styling */
+    button {
+      width: 100%;
+      padding: 15px;
+      background-color: #3498db;
+      color: white;
+      font-size: 16px;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+
+    button:hover {
+      background-color: #2980b9;
+    }
+
+    /* Car List Container */
+    .car-list-container {
+      max-width: 600px;
+      margin: 40px auto;
+      padding: 20px;
+      background-color: white;
+      border-radius: 12px;
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+    }
+
+    /* Car List Styling */
+    .car-list {
+      list-style-type: none;
+      padding: 0;
+      margin: 0;
+    }
+
+    .car-item {
+      background-color: #fff;
+      border-radius: 10px;
+      margin-bottom: 20px;
+      padding: 15px 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+      transition: all 0.3s ease;
+    }
+
+    /* Card Hover Effect */
+    .car-item:hover {
+      transform: scale(1.02);
+    }
+
+    /* Car Model, Year, Price Styling */
+    .car-item span {
+      font-weight: bold;
+      font-size: 16px;
+      color: #2c3e50;
+    }
+
+    .car-item .price {
+      color: #e74c3c;
+      font-size: 18px;
+    }
+
+    .car-item .year {
+      color: #8e44ad;
+      font-size: 14px;
+    }
+    
+    /* Responsive Design */
+    @media (max-width: 600px) {
+      .form-container, .car-list-container {
+        padding: 20px;
+      }
+
+      .car-item {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+
+      .car-item span {
+        margin-bottom: 8px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="form-container">
+    <h2>Car Dealership Management</h2>
+    <div class="form-group">
+      <label>Model :</label>
+      <input type="text" id="model" placeholder="Enter car model">
+    </div>
+    <div class="form-group">
+      <label>Price :</label>
+      <input type="text" id="price" placeholder="Enter car price (USD)">
+    </div>
+    <div class="form-group">
+      <label>Year :</label>
+      <input type="text" id="year" placeholder="Enter car year">
+    </div>
+    <button id="addCarButton">Add Car</button>
+  </div>
+
+  <div class="car-list-container">
+    <h3>Car Lists :</h3>
+    <ul class="car-list" id="carList"></ul>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
